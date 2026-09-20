@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="47ca5cdd-d8e2-407b-acb5-031e8e10d30b"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<style>/* cyrillic-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("cb574ea9-55f6-4893-aefc-81cb4f5b7490") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("762633e7-3cbd-4f43-a3f3-86dd2c4b2877") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("a7e86c6c-27cd-421f-ba3c-f37f567f2b70") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("85b91c76-6090-40d2-b88e-ab8cd903faf8") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("cb574ea9-55f6-4893-aefc-81cb4f5b7490") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("762633e7-3cbd-4f43-a3f3-86dd2c4b2877") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("a7e86c6c-27cd-421f-ba3c-f37f567f2b70") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("85b91c76-6090-40d2-b88e-ab8cd903faf8") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("cb574ea9-55f6-4893-aefc-81cb4f5b7490") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("762633e7-3cbd-4f43-a3f3-86dd2c4b2877") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("a7e86c6c-27cd-421f-ba3c-f37f567f2b70") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("85b91c76-6090-40d2-b88e-ab8cd903faf8") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("cb574ea9-55f6-4893-aefc-81cb4f5b7490") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("762633e7-3cbd-4f43-a3f3-86dd2c4b2877") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("a7e86c6c-27cd-421f-ba3c-f37f567f2b70") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("85b91c76-6090-40d2-b88e-ab8cd903faf8") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("9447139d-3298-47f1-9733-9058074fdb63") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("cc765d73-2a63-438a-8876-9d6dd046cb19") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("683aead3-9a08-4278-a302-1070d888df12") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("32c3b8da-6e09-450d-8fde-2d1e6cd00e0b") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("963c307b-2eff-430d-b84b-2cb2cbc2befe") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("3bcdfc0f-7aa7-4032-9831-7344c190bb9d") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("82cf406a-b9c1-4402-b448-22aa22d6ff14") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("3b83b42e-f996-4e7f-87f4-85d72d03ab8d") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("e404b127-663c-4d8c-a650-f2c1c2b31d6a") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("1d9e731a-e8d6-49d3-bf9b-d269e2770a58") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("74d20196-f584-47b5-ab4c-ccfb63c4e926") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("3f709189-2c3d-410d-8646-1dc5ab93a44d") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("33d81b58-ecc4-4f5f-8069-3b9177b9c99a") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("ce2a08be-526e-4418-a13f-27560ba9339b") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("e0d6b9bb-bee8-446f-a0ef-634fa8292287") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("6158f945-66c4-4d99-b842-b403a54c0e41") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("2535face-7634-4336-9c5c-58844156a2fe") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("39da8c8f-dfd3-4d5b-a3f0-7f4d23d71e36") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("966b7184-3f8c-4301-9424-5f959907016f") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("cd289b7c-4c20-4202-b198-9105c8054c2d") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<style>/* fallback */
+@font-face {
+  font-family: 'Material Symbols Outlined';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("4ee507a4-9bff-4d54-9dd3-4591b8437e92") format('woff2');
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+</style>
+<style>
+  body { margin:0; font-family:'Plus Jakarta Sans', system-ui, sans-serif; }
+  .ms { font-family:'Material Symbols Outlined'; font-weight:normal; font-style:normal; line-height:1; display:inline-block; white-space:nowrap; -webkit-font-smoothing:antialiased; }
+  .serif { font-family:'Spectral', Georgia, serif; }
+</style>
+</helmet>
+
+<!-- ====== TITLE + SYSTEM ====== -->
+<div style="position:absolute; left:80px; top:24px; width:960px">
+  <div style="display:flex; align-items:center; gap:14px">
+    <span class="ms" style="font-size:40px; color:#3C6B53">account_tree</span>
+    <div class="serif" style="font-size:36px; font-weight:600; color:#2B2117; letter-spacing:-0.5px">KinTree <span style="font-size:18px; color:#9a8c6f; font-weight:500; letter-spacing:0">— v2 · Warm Heritage</span></div>
+  </div>
+  <div style="margin-top:8px; font-size:15px; color:#6f6552; max-width:780px; line-height:1.5">Arah visual baru yang menerapkan kelima perbaikan: identitas hangat, node card foto-forward, kanvas dengan pita generasi + zoom + minimap, profil dengan chip hubungan, dan momen (kode undangan gaya tiket). Layar lama tetap tersimpan di <code style="background:#e7ddc9; padding:1px 5px; border-radius:4px; font-size:13px">KinTree App.dc.html</code>.</div>
+</div>
+
+<!-- system swatch strip -->
+<div style="position:absolute; left:80px; top:118px; display:flex; gap:18px; align-items:center; background:#FCF8F0; border:1px solid #E4DBC9; border-radius:14px; padding:12px 18px; box-shadow:0 2px 8px rgba(60,45,25,.06)">
+  <div style="display:flex; gap:7px; align-items:center">
+    <span style="width:22px; height:22px; border-radius:6px; background:#3C6B53"></span>
+    <span style="width:22px; height:22px; border-radius:6px; background:#B07B3E"></span>
+    <span style="width:22px; height:22px; border-radius:6px; background:#5E7E8C"></span>
+    <span style="width:22px; height:22px; border-radius:6px; background:#A8746F"></span>
+    <span style="width:22px; height:22px; border-radius:6px; background:#F4EDE0; border:1px solid #E4DBC9"></span>
+    <span style="width:22px; height:22px; border-radius:6px; background:#2B2117"></span>
+  </div>
+  <div style="width:1px; height:28px; background:#E4DBC9"></div>
+  <div style="font-size:13px; color:#6f6552; line-height:1.4"><span class="serif" style="font-size:16px; color:#2B2117">Spectral</span> untuk nama &amp; judul &nbsp;·&nbsp; <b style="color:#2B2117">Plus Jakarta Sans</b> untuk UI</div>
+</div>
+
+<!-- ====== LOGIN ====== -->
+<div style="position:absolute; left:80px; top:230px; width:380px">
+  <div data-drags-parent="1" style="position:absolute; top:-24px; font-size:12px; font-weight:500; color:#8c8069">Masuk</div>
+  <div style="background:#1d1812; border-radius:40px; padding:10px; box-shadow:0 12px 40px rgba(40,30,15,.22)">
+    <div style="background:#F4EDE0; border-radius:30px; overflow:hidden; height:740px; display:flex; flex-direction:column">
+      <div style="height:30px; display:flex; align-items:center; justify-content:space-between; padding:0 22px; font-size:12px; font-weight:600; color:#6f6552; flex:none">
+        <span>9:41</span><span style="display:flex; gap:6px"><span class="ms" style="font-size:15px">signal_cellular_alt</span><span class="ms" style="font-size:15px">wifi</span><span class="ms" style="font-size:15px">battery_full</span></span>
+      </div>
+      <div style="flex:1; display:flex; flex-direction:column; justify-content:center; padding:28px">
+        <div style="display:flex; justify-content:center">
+          <div style="width:88px; height:88px; border-radius:50%; background:#3C6B53; display:flex; align-items:center; justify-content:center; box-shadow:0 8px 20px rgba(60,107,83,.3)"><span class="ms" style="font-size:48px; color:#F4EDE0">account_tree</span></div>
+        </div>
+        <div class="serif" style="text-align:center; font-size:38px; font-weight:600; color:#2B2117; margin-top:18px">KinTree</div>
+        <div style="text-align:center; font-size:14px; color:#8c8069; margin-top:2px">Silsilah keluarga, tetap hidup.</div>
+        <div style="height:34px"></div>
+        <div style="position:relative; height:54px; border:1px solid #D8CFBD; background:#FCF8F0; border-radius:12px; margin-bottom:14px">
+          <div style="position:absolute; top:-8px; left:12px; background:#F4EDE0; padding:0 5px; font-size:12px; color:#8c8069">Email</div>
+          <div style="padding:0 16px; height:100%; display:flex; align-items:center; font-size:16px; color:#2B2117">budi@keluarga.id</div>
+        </div>
+        <div style="position:relative; height:54px; border:1px solid #D8CFBD; background:#FCF8F0; border-radius:12px; margin-bottom:24px">
+          <div style="position:absolute; top:-8px; left:12px; background:#F4EDE0; padding:0 5px; font-size:12px; color:#8c8069">Kata Sandi</div>
+          <div style="padding:0 16px; height:100%; display:flex; align-items:center; justify-content:space-between">
+            <span style="font-size:18px; color:#2B2117; letter-spacing:2px">••••••••</span>
+            <span class="ms" style="font-size:21px; color:#8c8069">visibility_off</span>
+          </div>
+        </div>
+        <div style="height:52px; border-radius:26px; background:#3C6B53; color:#F8F4EA; display:flex; align-items:center; justify-content:center; font-size:15px; font-weight:600; margin-bottom:18px; box-shadow:0 6px 16px rgba(60,107,83,.25)">Masuk</div>
+        <div style="text-align:center; color:#3C6B53; font-size:14px; font-weight:600">Belum punya akun? Daftar</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== REGISTER ====== -->
+<div style="position:absolute; left:1460px; top:230px; width:380px">
+  <div data-drags-parent="1" style="position:absolute; top:-24px; font-size:12px; font-weight:500; color:#8c8069">Daftar Akun</div>
+  <div style="background:#1d1812; border-radius:40px; padding:10px; box-shadow:0 12px 40px rgba(40,30,15,.22)">
+    <div style="background:#F4EDE0; border-radius:30px; overflow:hidden; height:740px; display:flex; flex-direction:column">
+      <div style="height:30px; display:flex; align-items:center; justify-content:space-between; padding:0 22px; font-size:12px; font-weight:600; color:#6f6552; flex:none">
+        <span>9:41</span><span style="display:flex; gap:6px"><span class="ms" style="font-size:15px">signal_cellular_alt</span><span class="ms" style="font-size:15px">wifi</span><span class="ms" style="font-size:15px">battery_full</span></span>
+      </div>
+      <div style="height:60px; display:flex; align-items:center; gap:8px; padding:0 16px; flex:none; border-bottom:1px solid #E4DBC9">
+        <span class="ms" style="font-size:24px; color:#2B2117">arrow_back</span>
+        <div class="serif" style="font-size:22px; font-weight:600; color:#2B2117">Daftar Akun</div>
+      </div>
+      <div style="flex:1; display:flex; flex-direction:column; justify-content:center; padding:28px">
+        <div style="display:flex; justify-content:center">
+          <div style="width:72px; height:72px; border-radius:50%; background:#B07B3E; display:flex; align-items:center; justify-content:center; box-shadow:0 8px 20px rgba(176,123,62,.28)"><span class="ms" style="font-size:38px; color:#F4EDE0">group_add</span></div>
+        </div>
+        <div class="serif" style="text-align:center; font-size:26px; font-weight:600; color:#2B2117; margin-top:16px">Buat akun baru</div>
+        <div style="text-align:center; font-size:14px; color:#8c8069; margin-top:4px; line-height:1.45">Setelah daftar, kamu bisa membuat grup keluarga atau bergabung lewat kode undangan.</div>
+        <div style="height:30px"></div>
+        <div style="position:relative; height:54px; border:1px solid #D8CFBD; background:#FCF8F0; border-radius:12px; margin-bottom:14px">
+          <div style="position:absolute; top:-8px; left:12px; background:#F4EDE0; padding:0 5px; font-size:12px; color:#8c8069">Email</div>
+          <div style="padding:0 16px; height:100%; display:flex; align-items:center; font-size:16px; color:#2B2117">budi@keluarga.id</div>
+        </div>
+        <div style="position:relative; height:54px; border:1px solid #D8CFBD; background:#FCF8F0; border-radius:12px; margin-bottom:8px">
+          <div style="position:absolute; top:-8px; left:12px; background:#F4EDE0; padding:0 5px; font-size:12px; color:#8c8069">Kata Sandi</div>
+          <div style="padding:0 16px; height:100%; display:flex; align-items:center; justify-content:space-between">
+            <span style="font-size:16px; color:#2B2117">rahasia123</span>
+            <span class="ms" style="font-size:21px; color:#8c8069">visibility</span>
+          </div>
+        </div>
+        <div style="font-size:12px; color:#9a8c6f; margin:0 4px 24px; display:flex; align-items:center; gap:5px"><span class="ms" style="font-size:14px; color:#3C6B53">check_circle</span>Minimal 6 karakter</div>
+        <div style="height:52px; border-radius:26px; background:#3C6B53; color:#F8F4EA; display:flex; align-items:center; justify-content:center; font-size:15px; font-weight:600; margin-bottom:18px; box-shadow:0 6px 16px rgba(60,107,83,.25)">Daftar</div>
+        <div style="text-align:center; color:#3C6B53; font-size:14px; font-weight:600">Sudah punya akun? Masuk</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== FAMILY HUB ====== -->
+<div style="position:absolute; left:540px; top:230px; width:380px">
+  <div data-drags-parent="1" style="position:absolute; top:-24px; font-size:12px; font-weight:500; color:#8c8069">Grup Keluarga · kode undangan gaya tiket</div>
+  <div style="background:#1d1812; border-radius:40px; padding:10px; box-shadow:0 12px 40px rgba(40,30,15,.22)">
+    <div style="background:#F4EDE0; border-radius:30px; overflow:hidden; height:740px; display:flex; flex-direction:column; position:relative">
+      <div style="height:30px; display:flex; align-items:center; justify-content:space-between; padding:0 22px; font-size:12px; font-weight:600; color:#6f6552; flex:none">
+        <span>9:41</span><span style="display:flex; gap:6px"><span class="ms" style="font-size:15px">signal_cellular_alt</span><span class="ms" style="font-size:15px">wifi</span><span class="ms" style="font-size:15px">battery_full</span></span>
+      </div>
+      <div style="height:60px; display:flex; align-items:center; padding:0 18px; flex:none; border-bottom:1px solid #E4DBC9">
+        <div class="serif" style="flex:1; font-size:22px; font-weight:600; color:#2B2117">Keluarga</div>
+        <span class="ms" style="font-size:24px; color:#8c8069">logout</span>
+      </div>
+      <div style="flex:1; padding:18px; display:flex; flex-direction:column; gap:14px">
+        <!-- card 1 -->
+        <div style="background:#FCF8F0; border:1px solid #E4DBC9; border-radius:18px; box-shadow:0 4px 14px rgba(60,45,25,.07); overflow:hidden">
+          <div style="display:flex; align-items:center; gap:14px; padding:16px 16px 12px">
+            <div class="serif" style="width:48px; height:48px; border-radius:14px; background:#3C6B53; color:#F4EDE0; display:flex; align-items:center; justify-content:center; font-size:22px; font-weight:600; flex:none">BS</div>
+            <div style="flex:1; min-width:0">
+              <div class="serif" style="font-size:19px; font-weight:600; color:#2B2117">Bani Sastro</div>
+              <div style="font-size:12.5px; color:#8c8069; margin-top:1px">5 generasi · 28 anggota</div>
+            </div>
+            <span class="ms" style="font-size:24px; color:#B07B3E">chevron_right</span>
+          </div>
+          <!-- ticket -->
+          <div style="display:flex; align-items:center; gap:10px; margin:0 16px 16px; padding:9px 12px; background:#F4EDE0; border:1px dashed #C9BD9E; border-radius:10px">
+            <span class="ms" style="font-size:18px; color:#B07B3E">confirmation_number</span>
+            <span style="font-size:11px; color:#8c8069; font-weight:600; text-transform:uppercase; letter-spacing:1px">Kode</span>
+            <span style="font-family:'Spectral',serif; font-size:18px; font-weight:600; letter-spacing:4px; color:#2B2117">AB3D9K</span>
+            <span class="ms" style="font-size:18px; color:#8c8069; margin-left:auto">content_copy</span>
+          </div>
+        </div>
+        <!-- card 2 -->
+        <div style="background:#FCF8F0; border:1px solid #E4DBC9; border-radius:18px; box-shadow:0 4px 14px rgba(60,45,25,.07); overflow:hidden">
+          <div style="display:flex; align-items:center; gap:14px; padding:16px 16px 12px">
+            <div class="serif" style="width:48px; height:48px; border-radius:14px; background:#B07B3E; color:#F4EDE0; display:flex; align-items:center; justify-content:center; font-size:22px; font-weight:600; flex:none">KW</div>
+            <div style="flex:1; min-width:0">
+              <div class="serif" style="font-size:19px; font-weight:600; color:#2B2117">Keluarga Wijaya</div>
+              <div style="font-size:12.5px; color:#8c8069; margin-top:1px">3 generasi · 12 anggota</div>
+            </div>
+            <span class="ms" style="font-size:24px; color:#B07B3E">chevron_right</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px; margin:0 16px 16px; padding:9px 12px; background:#F4EDE0; border:1px dashed #C9BD9E; border-radius:10px">
+            <span class="ms" style="font-size:18px; color:#B07B3E">confirmation_number</span>
+            <span style="font-size:11px; color:#8c8069; font-weight:600; text-transform:uppercase; letter-spacing:1px">Kode</span>
+            <span style="font-family:'Spectral',serif; font-size:18px; font-weight:600; letter-spacing:4px; color:#2B2117">K7P2QX</span>
+            <span class="ms" style="font-size:18px; color:#8c8069; margin-left:auto">content_copy</span>
+          </div>
+        </div>
+      </div>
+      <div style="position:absolute; right:18px; bottom:18px; height:54px; border-radius:18px; background:#3C6B53; color:#F8F4EA; display:flex; align-items:center; gap:8px; padding:0 22px; box-shadow:0 8px 20px rgba(60,107,83,.3); font-size:15px; font-weight:600"><span class="ms" style="font-size:22px">add</span>Grup</div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== MEMBER DETAIL ====== -->
+<div style="position:absolute; left:1000px; top:230px; width:380px">
+  <div data-drags-parent="1" style="position:absolute; top:-24px; font-size:12px; font-weight:500; color:#8c8069">Profil · chip hubungan yang bisa di-tap</div>
+  <div style="background:#1d1812; border-radius:40px; padding:10px; box-shadow:0 12px 40px rgba(40,30,15,.22)">
+    <div style="background:#F4EDE0; border-radius:30px; overflow:hidden; height:740px; display:flex; flex-direction:column; position:relative">
+      <div style="height:30px; display:flex; align-items:center; justify-content:space-between; padding:0 22px; font-size:12px; font-weight:600; color:#6f6552; flex:none">
+        <span>9:41</span><span style="display:flex; gap:6px"><span class="ms" style="font-size:15px">signal_cellular_alt</span><span class="ms" style="font-size:15px">wifi</span><span class="ms" style="font-size:15px">battery_full</span></span>
+      </div>
+      <!-- hero -->
+      <div style="position:relative; padding:8px 18px 22px; background:linear-gradient(#EDE3D0, #F4EDE0)">
+        <div style="display:flex; align-items:center; justify-content:space-between; height:44px">
+          <span class="ms" style="font-size:24px; color:#2B2117">arrow_back</span>
+          <div style="display:flex; gap:14px"><span class="ms" style="font-size:22px; color:#2B2117">edit</span><span class="ms" style="font-size:22px; color:#A8746F">delete</span></div>
+        </div>
+        <div style="display:flex; flex-direction:column; align-items:center; margin-top:6px">
+          <div style="position:relative">
+            <div class="serif" style="width:104px; height:104px; border-radius:50%; background:#5E7E8C; color:#F4EDE0; display:flex; align-items:center; justify-content:center; font-size:42px; font-weight:600; box-shadow:0 8px 22px rgba(40,30,15,.18); filter:grayscale(.25)">SW</div>
+            <div style="position:absolute; bottom:2px; right:2px; background:#2B2117; color:#EDE3D0; font-size:10px; font-weight:700; letter-spacing:1px; padding:3px 8px; border-radius:10px; text-transform:uppercase">Alm.</div>
+          </div>
+          <div class="serif" style="font-size:26px; font-weight:600; color:#2B2117; margin-top:14px">Sastro Wijoyo</div>
+          <div style="font-size:13px; color:#8c8069; margin-top:2px">"Mbah Kakung" · Yogyakarta</div>
+          <div style="font-size:13px; color:#3C6B53; font-weight:600; margin-top:6px">1940 — 2015 · 75 tahun</div>
+        </div>
+      </div>
+      <div style="flex:1; overflow:hidden; padding:4px 18px 18px">
+        <!-- info chips grid -->
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:18px">
+          <div style="background:#FCF8F0; border:1px solid #E4DBC9; border-radius:12px; padding:10px 12px"><div style="font-size:11px; color:#9a8c6f; text-transform:uppercase; letter-spacing:.5px">Lahir</div><div style="font-size:14px; color:#2B2117; margin-top:2px; font-weight:500">12 Maret 1940</div></div>
+          <div style="background:#FCF8F0; border:1px solid #E4DBC9; border-radius:12px; padding:10px 12px"><div style="font-size:11px; color:#9a8c6f; text-transform:uppercase; letter-spacing:.5px">Wafat</div><div style="font-size:14px; color:#2B2117; margin-top:2px; font-weight:500">3 Januari 2015</div></div>
+        </div>
+        <div style="background:#FCF8F0; border:1px solid #E4DBC9; border-radius:12px; padding:11px 13px; margin-bottom:20px"><div style="font-size:11px; color:#9a8c6f; text-transform:uppercase; letter-spacing:.5px">Catatan</div><div style="font-size:14px; color:#2B2117; margin-top:3px; line-height:1.45">Leluhur pendiri Bani Sastro.</div></div>
+        <!-- relations -->
+        <div class="serif" style="font-size:17px; font-weight:600; color:#2B2117; margin-bottom:10px">Hubungan</div>
+        <div style="display:flex; align-items:center; gap:7px; margin-bottom:8px"><span class="ms" style="font-size:16px; color:#A8746F">favorite</span><span style="font-size:12px; color:#8c8069; font-weight:600; text-transform:uppercase; letter-spacing:.5px">Pasangan</span></div>
+        <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px">
+          <div style="display:flex; align-items:center; gap:7px; background:#FCF8F0; border:1px solid #E4DBC9; border-radius:20px; padding:4px 12px 4px 4px"><span class="serif" style="width:26px; height:26px; border-radius:50%; background:#A8746F; color:#fff; display:flex; align-items:center; justify-content:center; font-size:13px">A</span><span style="font-size:13px; color:#2B2117; font-weight:500">Aminah</span></div>
+          <div style="display:flex; align-items:center; gap:7px; background:#FCF8F0; border:1px solid #E4DBC9; border-radius:20px; padding:4px 12px 4px 4px"><span class="serif" style="width:26px; height:26px; border-radius:50%; background:#A8746F; color:#fff; display:flex; align-items:center; justify-content:center; font-size:13px">S</span><span style="font-size:13px; color:#2B2117; font-weight:500">Sariyem</span></div>
+        </div>
+        <div style="display:flex; align-items:center; gap:7px; margin-bottom:8px"><span class="ms" style="font-size:16px; color:#3C6B53">child_care</span><span style="font-size:12px; color:#8c8069; font-weight:600; text-transform:uppercase; letter-spacing:.5px">Anak</span></div>
+        <div style="display:flex; gap:8px; flex-wrap:wrap">
+          <div style="display:flex; align-items:center; gap:7px; background:#FCF8F0; border:1px solid #E4DBC9; border-radius:20px; padding:4px 12px 4px 4px"><span class="serif" style="width:26px; height:26px; border-radius:50%; background:#5E7E8C; color:#fff; display:flex; align-items:center; justify-content:center; font-size:13px">B</span><span style="font-size:13px; color:#2B2117; font-weight:500">Budi</span></div>
+          <div style="display:flex; align-items:center; gap:7px; background:#FCF8F0; border:1px solid #E4DBC9; border-radius:20px; padding:4px 12px 4px 4px"><span class="serif" style="width:26px; height:26px; border-radius:50%; background:#A8746F; color:#fff; display:flex; align-items:center; justify-content:center; font-size:13px">W</span><span style="font-size:13px; color:#2B2117; font-weight:500">Wati</span></div>
+          <div style="display:flex; align-items:center; gap:7px; background:#FCF8F0; border:1px solid #E4DBC9; border-radius:20px; padding:4px 12px 4px 4px"><span class="serif" style="width:26px; height:26px; border-radius:50%; background:#5E7E8C; color:#fff; display:flex; align-items:center; justify-content:center; font-size:13px">J</span><span style="font-size:13px; color:#2B2117; font-weight:500">Joko</span></div>
+          <div style="display:flex; align-items:center; gap:7px; background:#FCF8F0; border:1px dashed #C9BD9E; border-radius:20px; padding:4px 12px 4px 4px"><span class="serif" style="width:26px; height:26px; border-radius:50%; background:#A8746F; color:#fff; display:flex; align-items:center; justify-content:center; font-size:13px">R</span><span style="font-size:13px; color:#2B2117; font-weight:500">Rina</span><span style="font-size:10px; color:#9a8c6f">angkat</span></div>
+        </div>
+      </div>
+      <div style="position:absolute; right:18px; bottom:18px; height:54px; border-radius:18px; background:#3C6B53; color:#F8F4EA; display:flex; align-items:center; gap:8px; padding:0 20px; box-shadow:0 8px 20px rgba(60,107,83,.3); font-size:15px; font-weight:600"><span class="ms" style="font-size:22px">add_link</span>Hubungan</div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== TREE CANVAS (HERO) ====== -->
+<div style="position:absolute; left:80px; top:1080px; width:380px">
+  <div data-drags-parent="1" style="position:absolute; top:-24px; font-size:12px; font-weight:500; color:#8c8069">Kanvas Pohon · pita generasi · zoom · minimap · garis melengkung</div>
+  <div style="background:#1d1812; border-radius:40px; padding:10px; box-shadow:0 12px 40px rgba(40,30,15,.22)">
+    <div style="background:#F4EDE0; border-radius:30px; overflow:hidden; height:740px; display:flex; flex-direction:column; position:relative">
+      <div style="height:30px; display:flex; align-items:center; justify-content:space-between; padding:0 22px; font-size:12px; font-weight:600; color:#6f6552; flex:none; z-index:8">
+        <span>9:41</span><span style="display:flex; gap:6px"><span class="ms" style="font-size:15px">signal_cellular_alt</span><span class="ms" style="font-size:15px">wifi</span><span class="ms" style="font-size:15px">battery_full</span></span>
+      </div>
+      <!-- top bar with search pill -->
+      <div style="padding:6px 16px 12px; flex:none; z-index:8; background:#F4EDE0; border-bottom:1px solid #E8DFCD">
+        <div class="serif" style="font-size:22px; font-weight:600; color:#2B2117; margin-bottom:8px">Bani Sastro</div>
+        <div style="display:flex; gap:10px; align-items:center">
+          <div style="flex:1; height:42px; background:#FCF8F0; border:1px solid #E4DBC9; border-radius:21px; display:flex; align-items:center; gap:8px; padding:0 14px"><span class="ms" style="font-size:20px; color:#9a8c6f">search</span><span style="font-size:14px; color:#9a8c6f">Cari anggota…</span></div>
+          <div style="width:42px; height:42px; border-radius:21px; background:#FCF8F0; border:1px solid #E4DBC9; display:flex; align-items:center; justify-content:center"><span class="ms" style="font-size:20px; color:#B07B3E">qr_code</span></div>
+        </div>
+      </div>
+      <!-- pannable canvas -->
+      <div style="flex:1; position:relative; overflow:hidden; background:#F4EDE0">
+        <!-- generation bands -->
+        <div style="position:absolute; left:0; right:0; top:0; height:206px; background:#3C6B530A; border-bottom:1px solid #E8DFCD"></div>
+        <div style="position:absolute; left:0; right:0; top:208px; height:208px; background:transparent; border-bottom:1px solid #E8DFCD"></div>
+        <div style="position:absolute; left:8px; top:10px; font-size:10px; font-weight:700; letter-spacing:1.5px; color:#bcae8f00; color:#A99B7E; writing-mode:horizontal-tb">GEN I</div>
+        <div style="position:absolute; left:8px; top:218px; font-size:10px; font-weight:700; letter-spacing:1.5px; color:#A99B7E">GEN II</div>
+        <div style="position:absolute; left:8px; top:426px; font-size:10px; font-weight:700; letter-spacing:1.5px; color:#A99B7E">GEN III</div>
+
+        <div style="position:absolute; left:-8px; top:24px; width:560px; height:560px">
+          <!-- edges -->
+          <svg width="560" height="560" viewBox="0 0 560 560" style="position:absolute; left:0; top:0; overflow:visible">
+            <!-- spouse married: Aminah-Sastro -->
+            <line x1="60" y1="62" x2="202" y2="62" stroke="#A8746F" stroke-width="3"></line>
+            <!-- spouse divorced: Sastro-Sariyem -->
+            <line x1="202" y1="62" x2="382" y2="62" stroke="#BCB29E" stroke-width="2" stroke-dasharray="6 5"></line>
+            <text x="292" y="51" text-anchor="middle" fill="#A1957C" font-family="'Plus Jakarta Sans'" font-size="10" font-weight="700" letter-spacing="1">CERAI</text>
+            <!-- spouse married: Budi-Sri -->
+            <line x1="52" y1="270" x2="156" y2="270" stroke="#A8746F" stroke-width="3"></line>
+            <!-- biological parent (curved) -->
+            <path d="M202,124 C202,168 52,166 52,208" fill="none" stroke="#8A6B4F" stroke-width="2"></path>
+            <path d="M202,124 C202,168 272,166 272,208" fill="none" stroke="#8A6B4F" stroke-width="2"></path>
+            <path d="M202,124 C202,168 492,166 492,208" fill="none" stroke="#8A6B4F" stroke-width="2"></path>
+            <path d="M52,332 C52,374 107,374 107,416" fill="none" stroke="#8A6B4F" stroke-width="2"></path>
+            <!-- adoptive parent (dashed): Rina -->
+            <path d="M202,124 C202,168 382,166 382,208" fill="none" stroke="#8A6B4F" stroke-width="2" stroke-dasharray="6 5"></path>
+          </svg>
+
+          <!-- GEN I nodes -->
+          <div style="position:absolute; left:8px; top:0; width:104px; height:124px; background:#FCF8F0; border:1px solid #E4DBC9; border-radius:16px; box-shadow:0 4px 12px rgba(60,45,25,.10); padding:10px; box-sizing:border-box; display:flex; flex-direction:column; align-items:center">
+            <div class="serif" style="width:50px; height:50px; border-radius:50%; background:#A8746F; color:#F4EDE0; display:flex; align-items:center; justify-content:center; font-size:22px; font-weight:600">A</div>
+            <div class="serif" style="font-size:15px; font-weight:600; color:#2B2117; margin-top:7px">Aminah</div>
+            <div style="font-size:10.5px; color:#9a8c6f; margin-top:1px">1944–2019</div>
+          </div>
+          <div style="position:absolute; left:150px; top:0; width:104px; height:124px; background:#FCF8F0; border:1px solid #E4DBC9; border-radius:16px; box-shadow:0 4px 12px rgba(60,45,25,.10); padding:10px; box-sizing:border-box; display:flex; flex-direction:column; align-items:center">
+            <div class="serif" style="width:50px; height:50px; border-radius:50%; background:#5E7E8C; color:#F4EDE0; display:flex; align-items:center; justify-content:center; font-size:22px; font-weight:600; filter:grayscale(.4); opacity:.85">S</div>
+            <div class="serif" style="font-size:15px; font-weight:600; color:#2B2117; margin-top:7px">Sastro <span style="font-size:9px; color:#A1957C; font-weight:700; letter-spacing:.5px">†</span></div>
+            <div style="font-size:10.5px; color:#9a8c6f; margin-top:1px">1940–2015</div>
+          </div>
+          <div style="position:absolute; left:330px; top:0; width:104px; height:124px; background:#FCF8F0; border:1px solid #E4DBC9; border-radius:16px; box-shadow:0 4px 12px rgba(60,45,25,.10); padding:10px; box-sizing:border-box; display:flex; flex-direction:column; align-items:center">
+            <div class="serif" style="width:50px; height:50px; border-radius:50%; background:#A8746F; color:#F4EDE0; display:flex; align-items:center; justify-content:center; font-size:22px; font-weight:600">S</div>
+            <div class="serif" style="font-size:15px; font-weight:600; color:#2B2117; margin-top:7px">Sariyem</div>
+            <div style="font-size:10.5px; color:#9a8c6f; margin-top:1px">1948–</div>
+          </div>
+
+          <!-- GEN II nodes (Budi highlighted) -->
+          <div style="position:absolute; left:0px; top:208px; width:104px; height:124px; background:#FCF8F0; border:2px solid #3C6B53; border-radius:16px; box-shadow:0 0 0 4px rgba(60,107,83,.14), 0 4px 12px rgba(60,45,25,.10); padding:10px; box-sizing:border-box; display:flex; flex-direction:column; align-items:center">
+            <div class="serif" style="width:50px; height:50px; border-radius:50%; background:#5E7E8C; color:#F4EDE0; display:flex; align-items:center; justify-content:center; font-size:22px; font-weight:600">B</div>
+            <div class="serif" style="font-size:15px; font-weight:600; color:#2B2117; margin-top:7px">Budi</div>
+            <div style="font-size:10.5px; color:#9a8c6f; margin-top:1px">b. 1968</div>
+          </div>
+          <div style="position:absolute; left:104px; top:208px; width:104px; height:124px; background:#FCF8F0; border:1px solid #E4DBC9; border-radius:16px; box-shadow:0 4px 12px rgba(60,45,25,.10); padding:10px; box-sizing:border-box; display:flex; flex-direction:column; align-items:center">
+            <div class="serif" style="width:50px; height:50px; border-radius:50%; background:#A8746F; color:#F4EDE0; display:flex; align-items:center; justify-content:center; font-size:22px; font-weight:600">S</div>
+            <div class="serif" style="font-size:15px; font-weight:600; color:#2B2117; margin-top:7px">Sri</div>
+            <div style="font-size:10.5px; color:#9a8c6f; margin-top:1px">b. 1971</div>
+          </div>
+          <div style="position:absolute; left:220px; top:208px; width:104px; height:124px; background:#FCF8F0; border:1px solid #E4DBC9; border-radius:16px; box-shadow:0 4px 12px rgba(60,45,25,.10); padding:10px; box-sizing:border-box; display:flex; flex-direction:column; align-items:center">
+            <div class="serif" style="width:50px; height:50px; border-radius:50%; background:#A8746F; color:#F4EDE0; display:flex; align-items:center; justify-content:center; font-size:22px; font-weight:600">W</div>
+            <div class="serif" style="font-size:15px; font-weight:600; color:#2B2117; margin-top:7px">Wati</div>
+            <div style="font-size:10.5px; color:#9a8c6f; margin-top:1px">b. 1972</div>
+          </div>
+          <div style="position:absolute; left:330px; top:208px; width:104px; height:124px; background:#FCF8F0; border:1px dashed #C9BD9E; border-radius:16px; box-shadow:0 4px 12px rgba(60,45,25,.10); padding:10px; box-sizing:border-box; display:flex; flex-direction:column; align-items:center">
+            <div class="serif" style="width:50px; height:50px; border-radius:50%; background:#A8746F; color:#F4EDE0; display:flex; align-items:center; justify-content:center; font-size:22px; font-weight:600">R</div>
+            <div class="serif" style="font-size:15px; font-weight:600; color:#2B2117; margin-top:7px">Rina</div>
+            <div style="font-size:9.5px; color:#A1957C; margin-top:1px; font-weight:600">anak angkat</div>
+          </div>
+          <div style="position:absolute; left:440px; top:208px; width:104px; height:124px; background:#FCF8F0; border:1px solid #E4DBC9; border-radius:16px; box-shadow:0 4px 12px rgba(60,45,25,.10); padding:10px; box-sizing:border-box; display:flex; flex-direction:column; align-items:center">
+            <div class="serif" style="width:50px; height:50px; border-radius:50%; background:#5E7E8C; color:#F4EDE0; display:flex; align-items:center; justify-content:center; font-size:22px; font-weight:600">J</div>
+            <div class="serif" style="font-size:15px; font-weight:600; color:#2B2117; margin-top:7px">Joko</div>
+            <div style="font-size:10.5px; color:#9a8c6f; margin-top:1px">b. 1975</div>
+          </div>
+
+          <!-- GEN III -->
+          <div style="position:absolute; left:55px; top:416px; width:104px; height:124px; background:#FCF8F0; border:1px solid #E4DBC9; border-radius:16px; box-shadow:0 4px 12px rgba(60,45,25,.10); padding:10px; box-sizing:border-box; display:flex; flex-direction:column; align-items:center">
+            <div class="serif" style="width:50px; height:50px; border-radius:50%; background:#5E7E8C; color:#F4EDE0; display:flex; align-items:center; justify-content:center; font-size:22px; font-weight:600">A</div>
+            <div class="serif" style="font-size:15px; font-weight:600; color:#2B2117; margin-top:7px">Andi</div>
+            <div style="font-size:10.5px; color:#9a8c6f; margin-top:1px">b. 1996</div>
+          </div>
+        </div>
+
+        <!-- minimap -->
+        <div style="position:absolute; left:14px; bottom:14px; width:96px; height:72px; background:#FCF8F0E8; border:1px solid #E4DBC9; border-radius:10px; box-shadow:0 4px 12px rgba(60,45,25,.12); overflow:hidden">
+          <span style="position:absolute; left:10px; top:12px; width:9px; height:9px; border-radius:2px; background:#A8746F"></span>
+          <span style="position:absolute; left:26px; top:12px; width:9px; height:9px; border-radius:2px; background:#5E7E8C"></span>
+          <span style="position:absolute; left:46px; top:12px; width:9px; height:9px; border-radius:2px; background:#A8746F"></span>
+          <span style="position:absolute; left:8px; top:34px; width:9px; height:9px; border-radius:2px; background:#5E7E8C"></span>
+          <span style="position:absolute; left:22px; top:34px; width:9px; height:9px; border-radius:2px; background:#A8746F"></span>
+          <span style="position:absolute; left:40px; top:34px; width:9px; height:9px; border-radius:2px; background:#A8746F"></span>
+          <span style="position:absolute; left:58px; top:34px; width:9px; height:9px; border-radius:2px; background:#5E7E8C"></span>
+          <span style="position:absolute; left:24px; top:54px; width:9px; height:9px; border-radius:2px; background:#5E7E8C"></span>
+          <span style="position:absolute; left:4px; top:6px; width:46px; height:38px; border:1.5px solid #3C6B53; border-radius:4px; background:#3C6B5314"></span>
+        </div>
+        <!-- zoom controls -->
+        <div style="position:absolute; right:14px; bottom:82px; width:42px; background:#FCF8F0; border:1px solid #E4DBC9; border-radius:12px; box-shadow:0 4px 12px rgba(60,45,25,.12); display:flex; flex-direction:column; overflow:hidden">
+          <div style="height:42px; display:flex; align-items:center; justify-content:center; border-bottom:1px solid #EFE7D6"><span class="ms" style="font-size:22px; color:#2B2117">add</span></div>
+          <div style="height:42px; display:flex; align-items:center; justify-content:center; border-bottom:1px solid #EFE7D6"><span class="ms" style="font-size:22px; color:#2B2117">remove</span></div>
+          <div style="height:42px; display:flex; align-items:center; justify-content:center"><span class="ms" style="font-size:20px; color:#B07B3E">center_focus_strong</span></div>
+        </div>
+      </div>
+      <!-- FAB -->
+      <div style="position:absolute; right:18px; bottom:18px; height:54px; border-radius:18px; background:#3C6B53; color:#F8F4EA; display:flex; align-items:center; gap:8px; padding:0 20px; box-shadow:0 8px 20px rgba(60,107,83,.3); font-size:15px; font-weight:600; z-index:9"><span class="ms" style="font-size:22px">person_add</span>Anggota</div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== MEMBER FORM ====== -->
+<div style="position:absolute; left:540px; top:1080px; width:380px">
+  <div data-drags-parent="1" style="position:absolute; top:-24px; font-size:12px; font-weight:500; color:#8c8069">Tambah Anggota</div>
+  <div style="background:#1d1812; border-radius:40px; padding:10px; box-shadow:0 12px 40px rgba(40,30,15,.22)">
+    <div style="background:#F4EDE0; border-radius:30px; overflow:hidden; height:740px; display:flex; flex-direction:column; position:relative">
+      <div style="height:30px; display:flex; align-items:center; justify-content:space-between; padding:0 22px; font-size:12px; font-weight:600; color:#6f6552; flex:none">
+        <span>9:41</span><span style="display:flex; gap:6px"><span class="ms" style="font-size:15px">signal_cellular_alt</span><span class="ms" style="font-size:15px">wifi</span><span class="ms" style="font-size:15px">battery_full</span></span>
+      </div>
+      <div style="height:60px; display:flex; align-items:center; gap:8px; padding:0 16px; flex:none; border-bottom:1px solid #E4DBC9">
+        <span class="ms" style="font-size:24px; color:#2B2117">arrow_back</span>
+        <div class="serif" style="font-size:22px; font-weight:600; color:#2B2117">Tambah Anggota</div>
+      </div>
+      <div style="flex:1; overflow:hidden; padding:18px">
+        <div style="display:flex; justify-content:center; margin-bottom:20px">
+          <div style="position:relative; width:96px; height:96px">
+            <div style="width:96px; height:96px; border-radius:50%; background:#EDE3D0; border:1px dashed #C9BD9E; display:flex; align-items:center; justify-content:center"><span class="ms" style="font-size:40px; color:#A1957C">add_a_photo</span></div>
+            <div style="position:absolute; right:0; bottom:0; width:32px; height:32px; border-radius:50%; background:#3C6B53; display:flex; align-items:center; justify-content:center; border:2px solid #F4EDE0"><span class="ms" style="font-size:16px; color:#fff">edit</span></div>
+          </div>
+        </div>
+        <div style="position:relative; height:52px; border:1px solid #D8CFBD; background:#FCF8F0; border-radius:12px; margin-bottom:14px">
+          <div style="position:absolute; top:-8px; left:12px; background:#F4EDE0; padding:0 5px; font-size:12px; color:#8c8069">Nama depan *</div>
+          <div style="padding:0 16px; height:100%; display:flex; align-items:center; font-size:16px; color:#2B2117">Budi</div>
+        </div>
+        <div style="position:relative; height:52px; border:1px solid #D8CFBD; background:#FCF8F0; border-radius:12px; margin-bottom:14px">
+          <div style="position:absolute; top:-8px; left:12px; background:#F4EDE0; padding:0 5px; font-size:12px; color:#8c8069">Nama belakang</div>
+          <div style="padding:0 16px; height:100%; display:flex; align-items:center; font-size:16px; color:#2B2117">Wijoyo</div>
+        </div>
+        <!-- gender segmented -->
+        <div style="font-size:12px; color:#8c8069; margin:2px 2px 7px">Jenis kelamin</div>
+        <div style="display:flex; gap:10px; margin-bottom:16px">
+          <div style="flex:1; height:46px; border-radius:12px; background:#5E7E8C; color:#F4EDE0; display:flex; align-items:center; justify-content:center; gap:7px; font-size:14px; font-weight:600"><span class="ms" style="font-size:18px">male</span>Laki-laki</div>
+          <div style="flex:1; height:46px; border-radius:12px; background:#FCF8F0; border:1px solid #D8CFBD; color:#8c8069; display:flex; align-items:center; justify-content:center; gap:7px; font-size:14px; font-weight:500"><span class="ms" style="font-size:18px">female</span>Perempuan</div>
+        </div>
+        <div style="position:relative; height:52px; border:1px solid #D8CFBD; background:#FCF8F0; border-radius:12px; margin-bottom:14px; display:flex; align-items:center; justify-content:space-between; padding:0 16px">
+          <div style="position:absolute; top:-8px; left:12px; background:#F4EDE0; padding:0 5px; font-size:12px; color:#8c8069">Tanggal lahir</div>
+          <div style="font-size:16px; color:#2B2117">3 Juni 1968</div>
+          <span class="ms" style="font-size:18px; color:#B07B3E">calendar_today</span>
+        </div>
+        <div style="display:flex; align-items:center; justify-content:space-between; background:#FCF8F0; border:1px solid #E4DBC9; border-radius:12px; padding:12px 16px; margin-bottom:18px">
+          <div style="font-size:15px; color:#2B2117">Masih hidup</div>
+          <div style="width:48px; height:28px; border-radius:14px; background:#3C6B53; position:relative"><div style="position:absolute; right:3px; top:3px; width:22px; height:22px; border-radius:50%; background:#fff"></div></div>
+        </div>
+        <div style="height:52px; border-radius:26px; background:#3C6B53; color:#F8F4EA; display:flex; align-items:center; justify-content:center; font-size:15px; font-weight:600; box-shadow:0 6px 16px rgba(60,107,83,.25)">Simpan</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== LEGEND POST-IT ====== -->
+<div style="position:absolute; left:1000px; top:1100px; width:300px; background:#FBE8B8; padding:18px 20px; box-shadow:0 4px 14px rgba(60,45,25,.14); transform:rotate(-1.2deg); font-size:13px; color:#5a4d28; line-height:1.6">
+  <div class="serif" style="font-weight:600; font-size:16px; margin-bottom:10px; color:#3a3115">Legenda pohon</div>
+  <div style="display:flex; align-items:center; gap:9px; margin-bottom:5px"><svg width="34" height="6"><line x1="0" y1="3" x2="34" y2="3" stroke="#A8746F" stroke-width="3"></line></svg> Pasangan menikah</div>
+  <div style="display:flex; align-items:center; gap:9px; margin-bottom:5px"><svg width="34" height="6"><line x1="0" y1="3" x2="34" y2="3" stroke="#BCB29E" stroke-width="2" stroke-dasharray="6 5"></line></svg> Cerai (pudar + label)</div>
+  <div style="display:flex; align-items:center; gap:9px; margin-bottom:5px"><svg width="34" height="6"><path d="M0,5 C12,5 22,1 34,1" fill="none" stroke="#8A6B4F" stroke-width="2"></path></svg> Orang tua kandung</div>
+  <div style="display:flex; align-items:center; gap:9px; margin-bottom:12px"><svg width="34" height="6"><path d="M0,5 C12,5 22,1 34,1" fill="none" stroke="#8A6B4F" stroke-width="2" stroke-dasharray="6 5"></path></svg> Orang tua angkat</div>
+  <div style="display:flex; align-items:center; gap:9px"><span style="width:16px; height:16px; border-radius:50%; background:#5E7E8C"></span> Laki-laki <span style="width:16px; height:16px; border-radius:50%; background:#A8746F; margin-left:8px"></span> Perempuan</div>
+  <div style="margin-top:8px; font-size:12px; color:#8a7a45">Gender kini jadi aksen halus, bukan border kaku. Yang wafat ditandai foto teredam + tag "Alm.".</div>
+</div>
+
+
+<!-- ====== SECTION 3 · DIALOG ====== -->
+<div data-drags-parent="1" style="position:absolute; left:80px; top:1900px; font-size:13px; font-weight:700; color:#8c8069; letter-spacing:1px; text-transform:uppercase">3 · Dialog &amp; Konfirmasi</div>
+
+<!-- ---- LOGOUT DIALOG ---- -->
+<div style="position:absolute; left:80px; top:1944px; width:380px">
+  <div data-drags-parent="1" style="position:absolute; top:-24px; font-size:12px; font-weight:500; color:#8c8069">Keluar dari akun</div>
+  <div style="background:#1d1812; border-radius:40px; padding:10px; box-shadow:0 12px 40px rgba(40,30,15,.22)">
+    <div style="background:#F4EDE0; border-radius:30px; overflow:hidden; height:740px; display:flex; flex-direction:column; position:relative">
+      <div style="height:30px; display:flex; align-items:center; justify-content:space-between; padding:0 22px; font-size:12px; font-weight:600; color:#6f6552; flex:none"><span>9:41</span><span style="display:flex; gap:6px"><span class="ms" style="font-size:15px">signal_cellular_alt</span><span class="ms" style="font-size:15px">wifi</span><span class="ms" style="font-size:15px">battery_full</span></span></div>
+      <div style="flex:1; position:relative">
+        <!-- faint backdrop: family hub -->
+        <div style="position:absolute; inset:0; opacity:.5">
+          <div style="height:60px; display:flex; align-items:center; padding:0 18px; border-bottom:1px solid #E4DBC9"><div class="serif" style="flex:1; font-size:22px; font-weight:600; color:#2B2117">Keluarga</div><span class="ms" style="font-size:24px; color:#8c8069">logout</span></div>
+          <div style="padding:18px; display:flex; flex-direction:column; gap:14px">
+            <div style="height:96px; background:#FCF8F0; border:1px solid #E4DBC9; border-radius:18px"></div>
+            <div style="height:96px; background:#FCF8F0; border:1px solid #E4DBC9; border-radius:18px"></div>
+          </div>
+        </div>
+        <!-- scrim + dialog -->
+        <div style="position:absolute; inset:0; background:rgba(40,30,15,.45); display:flex; align-items:center; justify-content:center; padding:26px">
+          <div style="width:100%; background:#FCF8F0; border-radius:26px; padding:26px 24px 18px; box-shadow:0 18px 50px rgba(20,14,4,.4)">
+            <div style="display:flex; justify-content:center"><div style="width:58px; height:58px; border-radius:50%; background:#B07B3E1F; display:flex; align-items:center; justify-content:center"><span class="ms" style="font-size:28px; color:#B07B3E">logout</span></div></div>
+            <div class="serif" style="text-align:center; font-size:21px; font-weight:600; color:#2B2117; margin-top:16px">Keluar dari akun?</div>
+            <div style="text-align:center; font-size:14px; color:#6f6552; line-height:1.5; margin-top:8px">Kamu perlu masuk lagi dengan email untuk membuka silsilah keluarga.</div>
+            <div style="display:flex; gap:10px; margin-top:22px">
+              <div style="flex:1; height:48px; border-radius:24px; border:1px solid #D8CFBD; color:#6f6552; display:flex; align-items:center; justify-content:center; font-size:15px; font-weight:600">Batal</div>
+              <div style="flex:1; height:48px; border-radius:24px; background:#B07B3E; color:#F8F4EA; display:flex; align-items:center; justify-content:center; font-size:15px; font-weight:600">Keluar</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ---- ADD DIALOG ---- -->
+<div style="position:absolute; left:540px; top:1944px; width:380px">
+  <div data-drags-parent="1" style="position:absolute; top:-24px; font-size:12px; font-weight:500; color:#8c8069">Menambahkan data</div>
+  <div style="background:#1d1812; border-radius:40px; padding:10px; box-shadow:0 12px 40px rgba(40,30,15,.22)">
+    <div style="background:#F4EDE0; border-radius:30px; overflow:hidden; height:740px; display:flex; flex-direction:column; position:relative">
+      <div style="height:30px; display:flex; align-items:center; justify-content:space-between; padding:0 22px; font-size:12px; font-weight:600; color:#6f6552; flex:none"><span>9:41</span><span style="display:flex; gap:6px"><span class="ms" style="font-size:15px">signal_cellular_alt</span><span class="ms" style="font-size:15px">wifi</span><span class="ms" style="font-size:15px">battery_full</span></span></div>
+      <div style="flex:1; position:relative">
+        <!-- faint backdrop: member form -->
+        <div style="position:absolute; inset:0; opacity:.5">
+          <div style="height:60px; display:flex; align-items:center; gap:8px; padding:0 16px; border-bottom:1px solid #E4DBC9"><span class="ms" style="font-size:24px; color:#2B2117">arrow_back</span><div class="serif" style="font-size:22px; font-weight:600; color:#2B2117">Tambah Anggota</div></div>
+          <div style="padding:18px; display:flex; flex-direction:column; gap:14px">
+            <div style="height:52px; background:#FCF8F0; border:1px solid #D8CFBD; border-radius:12px"></div>
+            <div style="height:52px; background:#FCF8F0; border:1px solid #D8CFBD; border-radius:12px"></div>
+            <div style="height:52px; background:#FCF8F0; border:1px solid #D8CFBD; border-radius:12px"></div>
+          </div>
+        </div>
+        <!-- scrim + dialog -->
+        <div style="position:absolute; inset:0; background:rgba(40,30,15,.45); display:flex; align-items:center; justify-content:center; padding:26px">
+          <div style="width:100%; background:#FCF8F0; border-radius:26px; padding:26px 24px 18px; box-shadow:0 18px 50px rgba(20,14,4,.4)">
+            <div style="display:flex; justify-content:center"><div style="width:58px; height:58px; border-radius:50%; background:#3C6B531F; display:flex; align-items:center; justify-content:center"><span class="ms" style="font-size:28px; color:#3C6B53">person_add</span></div></div>
+            <div class="serif" style="text-align:center; font-size:21px; font-weight:600; color:#2B2117; margin-top:16px">Tambah anggota baru?</div>
+            <div style="text-align:center; font-size:14px; color:#6f6552; line-height:1.5; margin-top:8px"><b style="color:#2B2117">Andi</b> akan ditambahkan ke pohon <b style="color:#2B2117">Bani Sastro</b> sebagai anak dari Budi &amp; Sri.</div>
+            <div style="display:flex; gap:10px; margin-top:22px">
+              <div style="flex:1; height:48px; border-radius:24px; border:1px solid #D8CFBD; color:#6f6552; display:flex; align-items:center; justify-content:center; font-size:15px; font-weight:600">Batal</div>
+              <div style="flex:1; height:48px; border-radius:24px; background:#3C6B53; color:#F8F4EA; display:flex; align-items:center; justify-content:center; gap:7px; font-size:15px; font-weight:600"><span class="ms" style="font-size:19px">check</span>Tambah</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ---- DELETE DIALOG ---- -->
+<div style="position:absolute; left:1000px; top:1944px; width:380px">
+  <div data-drags-parent="1" style="position:absolute; top:-24px; font-size:12px; font-weight:500; color:#8c8069">Menghapus data</div>
+  <div style="background:#1d1812; border-radius:40px; padding:10px; box-shadow:0 12px 40px rgba(40,30,15,.22)">
+    <div style="background:#F4EDE0; border-radius:30px; overflow:hidden; height:740px; display:flex; flex-direction:column; position:relative">
+      <div style="height:30px; display:flex; align-items:center; justify-content:space-between; padding:0 22px; font-size:12px; font-weight:600; color:#6f6552; flex:none"><span>9:41</span><span style="display:flex; gap:6px"><span class="ms" style="font-size:15px">signal_cellular_alt</span><span class="ms" style="font-size:15px">wifi</span><span class="ms" style="font-size:15px">battery_full</span></span></div>
+      <div style="flex:1; position:relative">
+        <!-- faint backdrop: member detail -->
+        <div style="position:absolute; inset:0; opacity:.5">
+          <div style="height:60px; display:flex; align-items:center; justify-content:space-between; padding:0 16px; border-bottom:1px solid #E4DBC9"><span class="ms" style="font-size:24px; color:#2B2117">arrow_back</span><div style="display:flex; gap:14px"><span class="ms" style="font-size:22px; color:#2B2117">edit</span><span class="ms" style="font-size:22px; color:#A8746F">delete</span></div></div>
+          <div style="display:flex; flex-direction:column; align-items:center; padding-top:24px"><div class="serif" style="width:96px; height:96px; border-radius:50%; background:#5E7E8C; color:#F4EDE0; display:flex; align-items:center; justify-content:center; font-size:38px; font-weight:600">SW</div><div class="serif" style="font-size:24px; font-weight:600; color:#2B2117; margin-top:14px">Sastro Wijoyo</div></div>
+        </div>
+        <!-- scrim + dialog -->
+        <div style="position:absolute; inset:0; background:rgba(40,30,15,.45); display:flex; align-items:center; justify-content:center; padding:26px">
+          <div style="width:100%; background:#FCF8F0; border-radius:26px; padding:26px 24px 18px; box-shadow:0 18px 50px rgba(20,14,4,.4)">
+            <div style="display:flex; justify-content:center"><div style="width:58px; height:58px; border-radius:50%; background:#BB4A3F1F; display:flex; align-items:center; justify-content:center"><span class="ms" style="font-size:28px; color:#BB4A3F">delete</span></div></div>
+            <div class="serif" style="text-align:center; font-size:21px; font-weight:600; color:#2B2117; margin-top:16px">Hapus anggota?</div>
+            <div style="text-align:center; font-size:14px; color:#6f6552; line-height:1.5; margin-top:8px"><b style="color:#2B2117">Sastro Wijoyo</b> akan dihapus beserta semua relasinya. Tindakan ini tidak bisa dibatalkan.</div>
+            <div style="display:flex; gap:10px; margin-top:22px">
+              <div style="flex:1; height:48px; border-radius:24px; border:1px solid #D8CFBD; color:#6f6552; display:flex; align-items:center; justify-content:center; font-size:15px; font-weight:600">Batal</div>
+              <div style="flex:1; height:48px; border-radius:24px; background:#BB4A3F; color:#F8F4EA; display:flex; align-items:center; justify-content:center; gap:7px; font-size:15px; font-weight:600"><span class="ms" style="font-size:19px">delete</span>Hapus</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</x-dc>
+
+
+</body></html>
